@@ -32,3 +32,11 @@ Board::boardSizeSet(int size) {
     this->size = size;
 }
 
+Board::getSize() {
+    return this->size;
+}
+
+Board::getBoardPlayer(Player player, int row, int column) {
+    if(Player.getNum() == 1)    return this->boardPlayer1[row][column];
+    else                        return this->boardPlayer2[row][column];
+}

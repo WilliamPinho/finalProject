@@ -14,6 +14,8 @@ public:
     Board(const Board& orig);
     virtual ~Board();
     boardSizeSet(int size);
+    getSize();
+    getBoardPlayer(Player player, int row, int column); 
 private:
     int size;
     int ** board;

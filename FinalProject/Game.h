@@ -10,11 +10,17 @@
 
 class Game {
 public:
+    Board board;
     Game();
     Game(const Game& orig);
     virtual ~Game();
     chooseBoardSize();
+    printLogo();
+    isThereAWinner();
+    generateBoard();
 private:
+    Player player1;
+    Player player2;
 
 };
 
