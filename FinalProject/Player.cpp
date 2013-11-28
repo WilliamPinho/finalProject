@@ -7,7 +7,8 @@
 
 #include "Player.h"
 
-Player::Player() {
+Player::Player(int num) {
+    this->num = num;
 }
 
 Player::Player(const Player& orig) {
@@ -15,4 +16,5 @@ Player::Player(const Player& orig) {
 
 Player::~Player() {
 }
+
 

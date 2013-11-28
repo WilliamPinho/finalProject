@@ -50,3 +50,29 @@ Game::isThereAWinner(Game instance) {
 	    }		
 	}
 }
+
+Game::printBoard() {
+    int size = this->board.getSize()
+    cout << endl << endl << endl;
+    for (int i = 0; i < size; i++) {
+        if (i == 0) {
+            string s1(2 * (size - 2), ' ');
+            cout << endl << "       " << s1;
+            for (int k = 0; k < size; k++) {
+                cout << setw(2) << k + 1 << "   ";
+            }
+            cout << endl << endl << endl;
+        }
+        cout << setw(3) << i + 1 << "   ";
+        if (i < size - 1) {
+            cout << "  ";
+            string s2(2 * (size - i - 2), ' ');
+            cout << s2;
+        }
+        for (int j = 0; j < size; j++)
+            cout << this->board.getBoardPlayer(1,i,j) << "    ";
+        cout << endl << endl;
+    }
+    cout << endl;
+
+}
